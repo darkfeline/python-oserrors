@@ -93,6 +93,12 @@ _ERRORS = (
 
 
 def oserror(err):
+    """Return an OSError builder function.
+
+    Args:
+        err: An error number, e.g., errno.ENOENT
+
+    """
     def build_oserror(filename=None, filename2=None, written=None):
         error = OSError(err, os.strerror(err))
         if filename is not None:
