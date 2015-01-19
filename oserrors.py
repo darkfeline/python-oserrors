@@ -105,6 +105,9 @@ def oserror(err):
     return build_oserror
 
 
-_globals = globals()
-for name, err in _ERRORS:
-    _globals[name] = oserror(err)
+def _init():
+    globals_ = globals()
+    for name, err in _ERRORS:
+        globals_[name] = oserror(err)
+
+_init()
