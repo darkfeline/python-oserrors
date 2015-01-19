@@ -46,7 +46,7 @@ characters_written; see Python docs on BlockingIOError for details.
 
 Argument can be passed by parameter name:
 
-    >>> raise blocking_io_eagain(filename='foo', filename='bar', written=5)
+    >>> raise blocking_io_eagain(filename='foo', filename2='bar', written=5)
     Traceback (most recent call last):
         ...
     BlockingIOError: [Errno 11] Resource temporarily unavailable: 'foo' -> 'bar'
